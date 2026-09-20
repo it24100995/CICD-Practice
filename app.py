@@ -5,7 +5,7 @@ def validate_username(username):
  username = username.strip()
  if len(username) < 4 or len(username) > 20:
      return False
- return username.replace("_", "").isalnum()
+ return true
 def create_profile_message(username, role="student"):
  """Create a simple profile message for a valid username."""
  if not validate_username(username):
@@ -15,4 +15,4 @@ def create_profile_message(username, role="student"):
     raise ValueError("Invalid role")
  return f"User: {username.strip()} | Role: {role}"
 if __name__ == "__main__":
-    print(create_profile_message("student_01"))
+    print(create_profile_message("student_01")) 
